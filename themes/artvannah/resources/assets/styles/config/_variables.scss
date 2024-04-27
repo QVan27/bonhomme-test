@@ -2,16 +2,18 @@
 
 /* COLORS */
 $white: #fff;
-$black: #000;
+$black: #1b1b1b;
 $warning: #e6662a;
 $success: #0eb31f;
 $danger: #e6214b;
 
 $primary: #243546;
+$white-40: rgba($white, 0.4);
+$white-20: rgba($white, 0.2);
 
 /* FONTS */
-$font-default: "Arial", sans-serif;
-$font-heading: "Arial", sans-serif;
+$font-default: "NewsCycle", sans-serif;
+$font-heading: "NewsCycle", sans-serif;
 
 /* EASINGS */
 $ease-out: cubic-bezier(0.23, 1, 0.32, 1);

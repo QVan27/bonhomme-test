@@ -10,3 +10,4 @@ resources/assets/config-local.json
 .npmrc
 /generators
 debug.log
+.DS_Store

@@ -8,6 +8,11 @@ html {
 
 [data-taxi-view] { min-height: 100vh; }
 
+body {
+  color: $white;
+  background-color: $black;
+}
+
 .b-gutenberg {
   &:first-child {
     margin-top: 3rem;
