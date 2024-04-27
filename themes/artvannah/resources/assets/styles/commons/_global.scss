@@ -1,0 +1,27 @@
+@use "../config" as *;
+
+html {
+  font-size: calc(10 * (100vw / var(--size)));
+
+  &.lenis { scroll-behavior: initial; }
+}
+
+[data-taxi-view] { min-height: 100vh; }
+
+.b-gutenberg {
+  &:first-child {
+    margin-top: 3rem;
+
+    @include media-breakpoint-up(md) { margin-top: 6rem; }
+
+    @include media-breakpoint-up(xl) { margin-top: 15rem; }
+  }
+
+  &:last-child {
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-up(md) { margin-bottom: 6rem; }
+
+    @include media-breakpoint-up(xl) { margin-bottom: 15rem; }
+  }
+}

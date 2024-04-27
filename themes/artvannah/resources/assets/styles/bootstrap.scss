@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$grid-gutter-width: 10px;
+$grid-columns: 24;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px,
+  xxxl: 1550px,
+);
+
+@import "~bootstrap/scss/bootstrap-grid";
+
+.container-fluid {
+  padding: 0 1rem;
+
+  @include media-breakpoint-up(md) { padding: 0 0.5rem; }
+}

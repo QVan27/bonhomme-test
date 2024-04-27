@@ -1,0 +1,26 @@
+@use "../config" as *;
+
+.p404 {
+  position: relative;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__title {
+    font-size: 10rem;
+    line-height: 9.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 20rem;
+      line-height: 19rem;
+    }
+  }
+
+  &__desc { margin: 2rem 0 4rem; }
+}

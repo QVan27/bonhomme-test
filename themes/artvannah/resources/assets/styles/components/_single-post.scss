@@ -1,0 +1,105 @@
+@use "../config" as *;
+
+$postTitleFont: "Arial", sans-serif;
+$postContentFont: "Arial", sans-serif;
+$postTitleColor: $black;
+$postContentColor: $black;
+
+.single-post {
+  .post-content {
+    h2 {
+      font-family: $postTitleFont;
+      font-size: 2.5rem;
+      margin: 3rem 0;
+      color: $postTitleColor;
+    }
+
+    h3 {
+      font-family: $postTitleFont;
+      font-size: 2.2rem;
+      margin: 2rem 0;
+      color: $postTitleColor;
+    }
+
+    h4 {
+      font-family: $postTitleFont;
+      font-size: 2rem;
+      margin: 1.5rem 0;
+      color: $postTitleColor;
+    }
+
+    p {
+      font-family: $postContentFont;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      color: $postContentColor;
+    }
+
+    a {
+      font-family: $postContentFont;
+      color: $postContentColor;
+      text-decoration: underline;
+    }
+
+    .wp-block-columns {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6rem;
+
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+      }
+
+      .wp-block-column {
+        display: flex;
+        flex-direction: column;
+
+        &:first-child { margin-bottom: 2rem; }
+        &.is-vertically-aligned-top { justify-content: flex-start; }
+        &.is-vertically-aligned-center { justify-content: center; }
+        &.is-vertically-aligned-bottom { justify-content: flex-end; }
+
+        @include media-breakpoint-up(md) {
+          &:first-child { margin-bottom: 0; }
+        }
+
+        .wp-block-image {
+          display: flex;
+          max-width: 100%;
+          height: 100%;
+          margin: 0;
+
+          figure {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+
+            &.alignleft {
+              float: left;
+              margin-right: 0;
+              margin-top: 0;
+              margin-bottom: 0;
+
+              @include media-breakpoint-up(md) { margin-right: 2rem; }
+            }
+
+            &.alignright {
+              float: right;
+              margin-left: 0;
+              margin-top: 0;
+              margin-bottom: 0;
+
+              @include media-breakpoint-up(md) { margin-left: 2rem; }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
