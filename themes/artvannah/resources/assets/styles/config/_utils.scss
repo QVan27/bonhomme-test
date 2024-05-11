@@ -41,8 +41,19 @@
   text-transform: uppercase;
 }
 
+.u-center {
+  text-align: center;
+}
+
 .u-flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.u-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

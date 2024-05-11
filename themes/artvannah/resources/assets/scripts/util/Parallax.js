@@ -12,9 +12,12 @@ import store from './store'
  * ⚠️ This class has to be used with Lenis scroll engine.
  */
 export default class Parallax {
+
   /**
    * Method to initialize the parallax effect on the elements.
    * It sets up the elements and their properties for the parallax effect.
+   *
+   * @return {void}
    */
   on() {
     this.els = []
@@ -70,6 +73,7 @@ export default class Parallax {
    * It updates the position of the elements based on the scroll position.
    *
    * @param {number} e - The scroll position.
+   * @return {void}
    */
   scroll(e) {
     const s = store.round(e, 3)

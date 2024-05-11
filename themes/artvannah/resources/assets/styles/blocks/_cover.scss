@@ -1,0 +1,28 @@
+@use "../config" as *;
+
+.b-cover {
+  position: relative;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+
+  .container-fluid {
+    display: grid;
+    align-items: flex-end;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5rem;
+    gap: 2rem;
+
+    span { @include indication; }
+  }
+}

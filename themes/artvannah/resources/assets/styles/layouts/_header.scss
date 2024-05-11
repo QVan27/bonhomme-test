@@ -2,7 +2,12 @@
 @use "../mixins" as *;
 
 .header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
   padding: 2rem 0;
+  z-index: $z-header;
+  background-color: $black;
 
   &__logo {
     display: inline-flex;
@@ -21,9 +26,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-
-      @include media-breakpoint-up(md) { gap: 2rem; }
+      gap: 2rem;
 
       @include media-breakpoint-up(xl) { gap: 3rem; }
 

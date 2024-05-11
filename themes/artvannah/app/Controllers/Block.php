@@ -4,7 +4,8 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class Block extends Controller {
+class Block extends Controller
+{
   // public static function example($data) {
   //     return [
   //         'title' => Element::title($data),
@@ -12,12 +13,13 @@ class Block extends Controller {
   //     ];
   // }
 
-  public static function flexibleContent($data) {
+  public static function flexibleContent($data)
+  {
     $fields = get_field($data['_blocks']);
     $index = 0;
     $components = [];
 
-    foreach($fields as $block) {
+    foreach ($fields as $block) {
       $component_function = toCamelCase($block['acf_fc_layout']);
       $components[$block['acf_fc_layout'] . '_' . $index] = Component::$component_function($block);
       $components[$block['acf_fc_layout'] . '_' . $index]['name'] = $block['acf_fc_layout'];
@@ -29,10 +31,19 @@ class Block extends Controller {
     ];
   }
 
-  public static function form($data) {
+  public static function form($data)
+  {
     return [
       'id' => $data['id-form']
     ];
   }
   // generated function here
+  public static function cover($data)
+  {
+    return [
+      'title' => $data['title'],
+      'suptitle' => $data['suptitle'],
+      'image' => Element::image($data['image'], '100vw', null, null),
+    ];
+  }
 }
