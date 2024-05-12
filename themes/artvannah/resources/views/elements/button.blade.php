@@ -1,5 +1,5 @@
 @php
-  $is_link = isset($is_link) ? $is_link : FALSE;
+  $is_link = isset($is_link) ? $is_link : true;
 @endphp
 
 @if ($is_link)

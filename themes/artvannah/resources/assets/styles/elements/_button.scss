@@ -2,4 +2,22 @@
 
 .button {
   display: block;
+  border-radius: 2rem;
+  background-color: $white;
+  padding: 1rem 1.5rem;
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+
+  @include indication;
+
+  @media screen and (hover: hover) {
+    transition: all 0.6s $ease-out;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
 }

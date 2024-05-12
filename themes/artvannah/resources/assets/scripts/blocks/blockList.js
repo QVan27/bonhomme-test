@@ -13,6 +13,10 @@ const blockList = [
   {
     name: 'b-popular-releases',
     fileName: 'PopularReleases'
+  },
+  {
+    name: 'b-push',
+    fileName: 'Push'
   }
 ]
 

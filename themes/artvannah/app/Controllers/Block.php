@@ -65,4 +65,14 @@ class Block extends Controller
       'items' => $items,
     ];
   }
+
+  public static function push($data)
+  {
+    return [
+      'suptitle' => $data['suptitle'],
+      'title' => $data['title'],
+      'cta' => $data['cta'],
+      'image' => Element::image($data['image'], '100vw', null, null),
+    ];
+  }
 }
