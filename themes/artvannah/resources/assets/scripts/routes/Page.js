@@ -102,25 +102,25 @@ export default class Page extends Renderer {
   /**
    * Called when the page has completely entered.
    * It starts the blocks' enter completed sequence.
+   * It turns on the observer and the parallax module if they exist.
    * If it's not the first load, it waits for the loader to complete before starting the sequence.
    * @returns {void}
    */
   onEnterCompleted() {
+    if (store.scrollEngine === 'lenis' || !store.scrollEngine) store.observer.on()
+
+    store.modules.parallax && store.modules.parallax.on()
+
     if (store.isFirstLoaded) this.startBlocksEnterCompleted()
     else window.addEventListener('loaderComplete', this.startBlocksEnterCompleted)
   }
 
   /**
    * Starts the blocks' enter completed sequence.
-   * It turns on the observer and the parallax module if they exist.
-   * It also observes each block instance and calls its onEnterCompleted method.
+   * Observes each block instance and calls its onEnterCompleted method.
    * @returns {void}
    */
   startBlocksEnterCompleted() {
-    if (store.scrollEngine === 'lenis' || !store.scrollEngine) store.observer && store.observer.on()
-
-    store.modules.parallax && store.modules.parallax.on()
-
     for (let i = 0; i < this.blocks.length; i++) {
       for (let j = 0; j < this.blocks[i].instances.length; j++) {
         const { el, once } = this.blocks[i].instances[j].class

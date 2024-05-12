@@ -23,6 +23,8 @@
         </div>
     </div>
     <div class="b-cover__bg">
-        @include('elements/image', ['data' => $data['image']])
+        <div class="b-cover__bg b-cover__bg--prlx" data-parallax='-1'>
+            @include('elements/image', ['data' => $data['image']])
+        </div>
     </div>
 </section>

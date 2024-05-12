@@ -15,6 +15,12 @@
     position: absolute;
     inset: 0;
     z-index: 1;
+
+    &--prlx {
+      top: auto;
+      bottom: 0;
+      height: 120%;
+    }
   }
 
   &__content {
