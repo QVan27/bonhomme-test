@@ -1,0 +1,46 @@
+@use "../config" as *;
+
+.b-popular-releases {
+  overflow: hidden;
+  padding: 10rem 0;
+
+  &__heading {
+    margin-bottom: 8rem;
+
+    p {
+      margin-top: 1rem;
+      color: $white-60;
+    }
+  }
+
+  &__slider {
+    &-wrapper { position: relative; }
+
+    &-slide {
+      position: absolute;
+      min-width: 33rem;
+      height: 45rem;
+      overflow: hidden;
+      user-select: none;
+
+      &__image {
+        position: absolute;
+        inset: 0;
+      }
+
+      &__content {
+        position: absolute;
+        left: 2rem;
+        bottom: 3rem;
+        display: flex;
+        align-items: center;
+      }
+
+      &__date {
+        margin-left: 1rem;
+
+        @include indication;
+      }
+    }
+  }
+}

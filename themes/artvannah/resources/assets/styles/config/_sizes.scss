@@ -5,7 +5,22 @@
   line-height: 1;
 }
 
+@mixin h2 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+@mixin h3 {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  line-height: 1;
+}
+
 @mixin indication {
-  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: normal;
+}
+
+@mixin base {
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
   line-height: normal;
 }

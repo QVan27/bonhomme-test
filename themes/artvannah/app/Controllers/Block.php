@@ -46,4 +46,23 @@ class Block extends Controller
       'image' => Element::image($data['image'], '100vw', null, null),
     ];
   }
+
+  public static function popularReleases($data)
+  {
+    $items = [];
+
+    for ($i = 0; $i < $data['items']; $i++) {
+      $items[] = [
+        'title' => $data['items_' . $i . '_title'],
+        'date' => $data['items_' . $i . '_date'],
+        'image' => Element::image($data['items_' . $i . '_image'], '25vw', null, true),
+      ];
+    }
+
+    return [
+      'title' => $data['title'],
+      'subtitle' => $data['subtitle'],
+      'items' => $items,
+    ];
+  }
 }
